@@ -2,17 +2,54 @@
 
 {% block content %}
     {% for post in object_list %}
-        <div style="margin-top: 1%">
-            <div class="post-entry">
-                <div class="bg-image card shadow-1-strong"
-                     style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(106,68,76,1) 100%);">
-                    <div style="margin-left: 1%">
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.body }}</p>
-                    </div>
+        <div class="s-content">
+        <div class="row">
+        <div id="main" class="s-content__main large-12 column">
+                                <article class="entry">
+
+                            <header class="entry__header">
+
+                                <h2 class="entry__title h1">
+                                    <a title="">{{ post.title }}</a>
+                                </h2>
+
+                            </header>
+
+                            <div class="entry__meta">
+                            <ul>
+                                <li>{{ post.published_date }}</li>
+                            </ul>
+                        </div>
+
+                            <div class="entry__content">
+                                <p>
+                                {{ post.body }}
+                                </p>
+                            </div>
+
+                        </article> <!-- end entry -->
                 </div>
-            </div>
         </div>
 
     {% endfor %}
+
+    {% if is_paginated %}
+        <div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <span class="current">
+        Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+    </span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a href="?page={{ paginator.num_pages }}">Last</a>
+    {% endif %}
+{% endif %}
+    </div>
+    </div>
+
 {% endblock content %}
