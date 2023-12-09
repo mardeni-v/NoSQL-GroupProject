@@ -53,3 +53,17 @@
     </div>
 
 {% endblock content %}
+
+{% block title %}
+    {% if user.is_authenticated %}
+        <li style="margin-left: auto;
+            margin-right: 0"><a>Hi {{ user.username }}!</a></li>
+        <li style="margin-left: auto;
+            margin-right: 0"><a id="myBtn" href="user/logout?next=/">Log out</a></li>
+{% else %}
+  <li style="margin-left: auto;
+            margin-right: 0"><a href="{% url 'login' %}">Log In</a></li>
+  <li style="margin-left: auto;
+            margin-right: 0"><a id="myBtn" href="user/registration/">Sign up</a></li>
+{% endif %}
+{% endblock title%}

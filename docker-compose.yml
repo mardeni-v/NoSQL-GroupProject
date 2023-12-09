@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  django:
+    image: djangoproject:0.3
+    container_name: django
+    restart: always
+    #volumes:
+    #  - ./:/main
+    #  - ./static:/static
+    environment:
+      - DB_HOST=mongo
+    #command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    hostname: mongo
+    restart: always
+
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - 27017:27017
+volumes:
+  mongodb_data:
+    name: mongo_data

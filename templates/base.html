@@ -1,137 +1,92 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
 
-    <!--- basic page needs
+  <!--- basic page needs
     ================================================== -->
-    <meta charset="utf-8">
-    <title>Keep It Simple</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <title>Machine learning</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- mobile specific metas
+  <!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS
+  <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/main.css">
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/main.css">
 
 </head>
 
 <body id="top">
 
-    <!-- preloader
+  <!-- preloader
     ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+  <div id="preloader">
+    <div id="loader" class="dots-fade">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  </div>
 
-    <!-- Header
+  <!-- Header
     ================================================== -->
-    <header class="s-header">
+  <header class="s-header">
 
-        <div class="row">
+    <div class="row">
 
-            <div class="s-header__content column">
-                <h1 class="s-header__logotext">
-                    <a href="index.html" title="">Machine learning</a>
+      <div class="s-header__content column">
+        <h1 class="s-header__logotext">
+                    <a href="/" title="">Machine learning</a>
                 </h1>
-                <p class="s-header__tagline">All about machine learning and its applications</p>
-            </div>
+        <p class="s-header__tagline">All about machine learning and its applications</p>
+      </div>
 
-        </div> <!-- end row -->
-
-       <nav class="s-header__nav-wrap">
-
-           <div class="row">
-
-                <ul class="s-header__nav">
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li class="has-children"><a href="#0">Dropdown</a>
-                        <ul>
-                            <li><a href="#0">Submenu 01</a></li>
-                            <li><a href="#0">Submenu 02</a></li>
-                            <li><a href="#0">Submenu 03</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="demo.html">Demo</a></li>
-                    <li><a href="archives.html">Archives</a></li>
-                    <li class="has-children"><a href="#0">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Blog Entries</a></li>
-                            <li><a href="single.html">Single Blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="page.html">Page</a></li>
-                </ul> <!-- end #nav -->
-
-           </div>
-
-        </nav> <!-- end #nav-wrap -->
-
-        <a class="header-menu-toggle" href="#0" title="Menu"><span>Menu</span></a>
-
-    </header> <!-- Header End -->
-
-
-
-    <!-- Content
-    ================================================== -->
-        <div>
-        {% block content %}
-        {% endblock content %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-                crossorigin="anonymous"></script>
     </div>
-    <!-- Footer
+    <!-- end row -->
+
+    <nav class="s-header__nav-wrap">
+
+      <div class="row">
+
+        <ul class="s-header__nav">
+          <li class="large-12 tab-full column current"><a href="/">Home</a></li>
+          {% block title %} {% endblock title%}
+
+        </ul>
+        <!-- end #nav -->
+
+        <div id="google_translate_element" style="position: fixed; top: 0; right: 0;"></div>
+
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,ru',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+          }
+        </script>
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+      </div>
+
+    </nav>
+    <!-- end #nav-wrap -->
+
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
     ================================================== -->
-    <footer class="s-footer">
-
-
-        <div class="row s-footer__bottom">
-
-            <div class="large-12 tab-full column s-footer__info">
-                <h3 class="h6">About our blog</h3>
-
-                <p>
-                Lorem ipsum Sed nulla deserunt voluptate elit occaecat culpa cupidatat sit irure sint
-                sint incididunt cupidatat esse in Ut sed commodo tempor consequat culpa fugiat incididunt.
-                </p>
-            </div>
-
-
-            <div class="ss-copyright">
-                <span>Contacts: mardeni1101@gmail.com</span>
-            </div>
-
-        </div> <!-- end footer__bottom -->
-
-
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
-            </a>
-        </div> <!-- end ss-go-top -->
-
-    </footer> <!-- end Footer-->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+  <div>
+    {% block content %} {% endblock content %}
+  </div>
 
 </body>
 

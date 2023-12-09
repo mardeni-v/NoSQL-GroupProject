@@ -1,0 +1,12 @@
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>Registration</h2>
+    <form class="animate" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>

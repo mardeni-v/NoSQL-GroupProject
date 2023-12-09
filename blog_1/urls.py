@@ -1,9 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
-from .views import BlogListView, AboutPageView, ImputPageView
+from .views import BlogListView, registration
 
 urlpatterns = [
     path('', BlogListView.as_view(), name='home'),
-    path('about/', AboutPageView.as_view(), name='about'),
-    path('imput/', ImputPageView.as_view(), name='imput')
+    path('user/registration/', registration),
+    path("user/", include("django.contrib.auth.urls")),
 ]
